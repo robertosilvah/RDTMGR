@@ -1,0 +1,49 @@
+#svg-gantt #bars {
+	fill: #c00707;
+
+	rect {
+		&:hover {
+			opacity: .6;
+		}
+
+		cursor: pointer;
+	}
+
+	.status-0 { fill: #6dc78c; }
+	.status-1 { fill: #ad4d4f; }
+	.status-2 { fill: #6495ee; }
+	.status-3 { fill: #ff7f50; }
+	.status-4 { fill: #cd853e; }
+	.status-5 { fill: #008080; }
+	.status-6 { fill: #fa8072; }
+	.status-7 { fill: #5f9ea0; }
+	.status-8 { fill: #b4b200; }
+	.status-9 { fill: #a52929; }
+	.status-10 { fill: #414b85; }
+	.status-11 { fill: #deb887; }
+	
+	.main-top-bar {
+		&:hover {
+			fill: #0D4F8B;
+			opacity: 1;
+		}
+	}
+
+	.main-bottom-bar {
+		fill: #d9d9d9;
+
+		&:hover {
+			fill: #0D4F8B;
+			opacity: 1;
+		}
+	}
+
+	.main-top-bar.selected, .main-bottom-bar.selected {
+		fill: #0D4F8B;
+	}
+
+	.bottom-bar.type-0 { fill: #7a9a78; }
+	.bottom-bar.type-1 { fill: #ed2b2b; }
+	.bottom-bar.type-2 { fill: #780606; }
+	.bottom-bar.type-5 { fill: #f0e68c; }
+}

@@ -1,0 +1,8 @@
+POST http://127.0.0.1:3000/api/process/1
+Content-Type: application/json
+
+{
+	"clientId": 2,
+	"start": "2021-04-01T03:00:00.000Z",
+	"end": "2021-05-01T03:00:00.000Z"
+}

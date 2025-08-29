@@ -1,0 +1,11 @@
+### Get the current state of the available line processes.
+GET http://127.0.0.1:3000/api/process
+
+### Get the state of line process with locationId 1
+GET http://127.0.0.1:3000/api/process/1
+
+### Get the state of line process with locationId 1 in an specific time range.
+GET http://127.0.0.1:3000/api/process/1?start=2021-02-09T00:00:00.000Z&end=2021-02-10T00:00:00.000Z
+
+### Change the product of line process with locationId 1.
+POST http://127.0.0.1:3000/api/process/1/product/5

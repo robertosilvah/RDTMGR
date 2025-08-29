@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <DashBoard /> No 1 1`] = `
+<ContextProvider
+  value={
+    Object {
+      "changed": false,
+      "date": 2021-02-19T19:01:07.439Z,
+      "dateRange": Array [
+        2021-02-19T19:01:07.439Z,
+        "Fri Feb 19 2021 16:01:07 GMT-0300 (Argentina Standard Time)1",
+      ],
+      "search": undefined,
+      "setFilters": null,
+      "shiftFilter": "Third",
+      "shiftFilters": null,
+      "timeFilter": "Shift",
+      "weekFilter": null,
+    }
+  }
+>
+  <Dashboard />
+</ContextProvider>
+`;

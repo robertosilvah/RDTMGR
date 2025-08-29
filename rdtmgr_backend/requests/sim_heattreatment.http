@@ -1,0 +1,21 @@
+GET http://127.0.0.1:3002/2/start
+
+###
+
+GET http://127.0.0.1:3002/2/stop
+
+###
+
+GET http://127.0.0.1:3002/2/increment
+
+###
+
+GET http://127.0.0.1:3002/2/increment/0
+
+###
+
+GET http://127.0.0.1:3002/2/increment/start
+
+###
+
+GET http://127.0.0.1:3002/2/increment/stop

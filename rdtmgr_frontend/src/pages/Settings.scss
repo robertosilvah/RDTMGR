@@ -1,0 +1,54 @@
+.rmwc-data-table__cell .mdc-text-field {
+	vertical-align: middle;
+	margin: -0.75rem -1rem;
+	background-color: transparent;
+	border-radius: 0;
+	min-width: 160px;
+}
+
+.datetime-cell {
+	display: flex;
+
+	& > :nth-child(1) {
+		margin-right: 0;
+	}
+
+	& > :nth-child(2) {
+		margin-left: 0;
+	}
+}
+
+.settings-page {
+	display: grid;
+	grid-template-rows: min-content 1fr;
+	height: 100%;
+	padding: 0 24px;
+
+	@media screen and (min-width: 960px) {
+		& {
+			margin: 0 48px;
+		}
+	}
+
+	@media screen and (min-width: 1280px) {
+		& {
+			margin: 0 96px;
+		}
+	}
+
+	@media screen and (min-width: 1366px) {
+		& {
+			margin: 0 15%;
+		}
+	}
+
+	.end {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	.table {
+		margin-bottom: 24px;
+	}
+}

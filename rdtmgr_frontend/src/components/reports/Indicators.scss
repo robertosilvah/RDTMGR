@@ -1,0 +1,19 @@
+.mdc-card.indicators {
+	header.mdc-top-app-bar {
+		background-color: transparent;
+		color: black;
+		border-bottom: 1px solid var(--mdc-theme-divider);
+		position: relative;
+	}
+
+	.content {
+		flex-direction: row;
+		display: flex;
+		flex-basis: auto;
+		gap: 16px;
+
+		.indicator {
+			width: 100%;
+		}
+	}
+}

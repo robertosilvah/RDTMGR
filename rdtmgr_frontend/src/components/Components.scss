@@ -1,0 +1,52 @@
+div.indicator-card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+
+	div.content {
+		display: flex;
+		flex-direction: column;
+		padding: 18px 12px 12px;
+		height: 100%;
+		gap: 12px;
+
+		span.title {
+			font-weight: bolder;
+			font-size: 32pt;
+		}
+
+		span.subtitle {
+			font-weight: 500;
+			font-size: 16pt;
+
+			& > span:nth-of-type(2) {
+				font-size: 12pt;
+				font-weight: 400;
+			}
+		}
+	}
+
+	div.footer {
+		background: rgba(0, 0, 0, .06);
+		display: flex;
+		justify-content: center;
+		gap: 4px;
+		align-items: center;
+		padding: 4px 0;
+		font-weight: 500;
+		cursor: pointer;
+	}
+
+	div.background {
+		position: absolute;
+		display: block;
+		mask-image: url(../assets/open-in-new.svg);
+		mask-repeat: no-repeat;
+		mask-size: contain;
+		background-color: currentColor;
+		right: 12px;
+		height: 92px;
+		width: 92px;
+	}
+}

@@ -1,0 +1,218 @@
+﻿$color-vertical-separator: #00f;
+$color-gantt-top-hover1: #00f;
+$color-gantt-top-hover2: #ff0;
+$color-blue-gray: #7080AA;
+
+/* Gantt */
+.divGantt { margin: 0;}
+
+svg.gantt
+{
+	font-family: Verdana, Geneva, sans-serif;
+	shape-rendering: crispEdges;
+}
+
+svg.gantt.hideSvg {display:none}
+
+/* Markers */
+svg.gantt path.arrow
+{
+	stroke: $color-blue-gray;
+	stroke-width: 1px;
+	fill: none;
+	marker-end: url(#markerArrow);
+}
+
+
+/* Texts */
+svg.gantt text
+{
+	fill:black;
+	stroke: none;
+	stroke-width:0;
+	font-weight: normal
+}
+
+svg.gantt text.barTopText { font-size: 13px; font-weight: bold; fill: #FFFFFF; }
+svg.gantt text.barTopTimeText { font-size: 8px;  }
+
+svg.gantt text.leftTitle,
+svg.gantt text.mainTitle{ font-size:16px; font-weight: bold }
+
+svg.gantt text.labelTopAxisY,
+svg.gantt text.labelBottomAxisY,
+svg.gantt text.labelBarBottom { font-family: Arial, Helvetica, sans-serif; font-size: 9px; font-weight: normal }
+
+svg.gantt text.labelTopAxisY { fill: #8090FF }
+svg.gantt text.labelBottomAxisY { fill: #708090 }
+svg.gantt text.labelBarBottom { fill: #FF0000 }
+
+
+/* Legend */
+svg.gantt text.legend { font-size:9px; fill:#708090 }
+
+
+/* Axis */
+svg.gantt .axisX,
+svg.gantt .axisTopY,
+svg.gantt .axisBottomY { font: 10px sans-serif; stroke-width: 0 }
+
+svg.gantt .axisTopY text { fill: #8090FF }
+svg.gantt .axisBottomY text { fill: #708090 }
+
+svg.gantt .axisX path,
+svg.gantt .axisTopY path,
+svg.gantt .axisBottomY path { fill: none; stroke: #000 }
+
+
+/* Bars */
+svg.gantt rect {
+	stroke-width: 0;
+}
+
+svg.gantt rect.ganttTopTypePROD,
+svg.gantt rect.ganttTopTypePROG,
+svg.gantt rect.ganttBottom { fill: #D9D9D9 }
+
+svg.gantt rect.ganttBottom:hover { cursor: pointer }
+svg.gantt rect.ganttBottom:hover > rect.ganttTop { cursor: pointer }
+
+svg.gantt rect.ganttTopTypePROD.ganttTopHover,
+svg.gantt rect.ganttTopTypePROD:hover { fill: $color-gantt-top-hover1; cursor: pointer }
+
+svg.gantt rect.ganttTopTypePROG.ganttTopHover,
+svg.gantt rect.ganttTopTypePROG:hover { cursor: pointer }
+
+svg.gantt rect.ganttTopTypePVsR.ganttTopHover,
+svg.gantt rect.ganttTopTypePVsR:hover { fill: $color-gantt-top-hover2; cursor: pointer }
+
+svg.gantt rect.borderTop { fill: $color-blue-gray; }
+svg.gantt rect.borderBase { fill: #999; }
+
+svg.gantt rect.barTop
+{
+		stroke-width: 1px;
+		stroke: white;
+		fill: url(#gradient);
+}
+
+svg.gantt rect.barBottomStatus0 {
+	stroke-width: 1;
+	stroke: white;
+	fill: url(#barBottomGreen);
+}
+svg.gantt rect.barBottomStatus1 {
+	stroke-width: 1;
+	stroke: white;
+	fill: url(#barBottomRed);
+}
+svg.gantt rect.barBottomStatus2 {
+	stroke-width: 1;
+	stroke: white;
+	fill: url(#barBottomDarkRed);
+}
+svg.gantt rect.barBottomStatus5 {
+	stroke-width: 1;
+	stroke: white;
+	fill: url(#barBottomYellow);
+}
+
+svg.gantt rect.barTop:hover,
+svg.gantt rect.barBottomStatus0:hover,
+svg.gantt rect.barBottomStatus1:hover,
+svg.gantt rect.barBottomStatus2:hover,
+svg.gantt rect.barBottomStatus5:hover{ cursor: pointer }
+
+svg.gantt line.barSeparator { stroke: white; stroke-width: 1px; fill: none }
+
+svg.gantt rect.fillColor0 { fill: #6495EE }
+svg.gantt rect.fillColor1 { fill: #DEB887 }
+svg.gantt rect.fillColor2 { fill: #008080 }
+svg.gantt rect.fillColor3 { fill: #FF7F50 }
+svg.gantt rect.fillColor4 { fill: #CD853E }
+svg.gantt rect.fillColor5 { fill: #6DC78C }
+svg.gantt rect.fillColor6 { fill: #FA8072 }
+svg.gantt rect.fillColor7 { fill: #5F9EA0 }
+svg.gantt rect.fillColor8 { fill: #B4B200 }
+svg.gantt rect.fillColor9 { fill: #AD4D4F }
+svg.gantt rect.fillColor10 { fill: #414B85 }
+svg.gantt rect.fillColor11 { fill: #A52929 }
+
+svg.gantt rect.fillColorStatus0 { fill:#f00 }
+
+svg.gantt rect.fillColorCategory1 { fill:#A0B0FF }
+svg.gantt rect.fillColorCategory2 { fill:#008080 }
+
+/* Lines */
+svg.gantt line { stroke-width: 1; fill:none }
+
+svg.gantt line.dotted { stroke: #C0C0C0; stroke-dasharray: 4, 2 }
+svg.gantt line.smooth { stroke: #000 }
+svg.gantt line.smooth-lighter { stroke: gray }
+
+svg.gantt line.verticalSeparator {stroke: $color-vertical-separator}
+
+
+/* X Marks */
+path.xMark { stroke: red; stroke-width: 1px; fill: none }
+path.xMark:hover { cursor: pointer }
+
+.tooltip
+{
+	z-index: 10000;
+}
+
+.barItem:hover
+{
+	opacity: .7;	
+}
+
+/* Tooltips */
+div.ganttTooltip
+{
+	position: absolute;
+	text-align: center;
+	width: auto;
+	height: auto;
+	padding: 2px;
+	background: transparent;
+	border: 0;
+	z-index: 1000;
+	pointer-events: none;
+}
+
+div.ganttTooltip table.header
+{
+	font-size: 10px;
+	color:#ffffff;
+	font-family: verdana;
+	height: 20px;
+	text-align: center;
+	border:solid 2px #666666;
+	background-color: #666666;
+	font-weight:bold;
+	padding-left:3px;
+	padding-right:3px;
+	}
+
+div.ganttTooltip table td { height: auto; padding:2px }
+
+div.ganttTooltip table td.cellHeader
+{
+	color: #666666;
+	background-color: #ececec;
+	border-top:solid 1px #666666;
+	border-right:solid 1px #666666;
+	font-weight:bold;
+	height: 16px;
+}
+
+div.ganttTooltip table td.cell
+{
+	font-size: 9px;
+	color: #666666;
+	background-color: white;
+	border-top:solid 1px #666666;
+	font-weight:normal;
+	height: 16px;
+}

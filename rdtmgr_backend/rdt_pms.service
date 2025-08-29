@@ -1,0 +1,15 @@
+[Unit]
+Description=RDT PMS Backend Server
+After=network.target
+After=mariadb.service
+
+[Service]
+User=antares
+WorkingDirectory=/home/antares/rdt_pms/
+ExecStart=/home/antares/rdt_pms/run.sh
+Restart=always
+RestartSec=5
+SyslogIdentifier=rdt_pms
+
+[Install]
+WantedBy=multi-user.target

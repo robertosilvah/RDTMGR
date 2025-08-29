@@ -1,0 +1,12 @@
+{
+	"1": {
+		"scanner": "value",
+		"count": "UpsetterPipeCount",
+		"cycleTime": "UpsetterCycleTime"
+	},
+	"2": {
+		"scanner": "HT_DT_Scanner",
+		"count": "HTPipeCounter",
+		"cycleTime": "HtCycleTime"
+	}
+}

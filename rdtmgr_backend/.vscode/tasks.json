@@ -1,0 +1,28 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"group": "test",
+			"command": [
+				"deno",
+				"run",
+				"--allow-net",
+				"--allow-read=./",
+				"--allow-env",
+				"src/server.ts"
+			],
+			"label": "deno: run"
+		},
+		{
+			"type": "shell",
+			"group": "test",
+			"command": [
+				"deno",
+				"test",
+				"-A"
+			],
+			"label": "deno: test"
+		}
+	]
+}
